@@ -1,0 +1,42 @@
+
+	설정(Configuration)	--> config
+	Data Model	--> model
+	UX/UI		--> viewer
+	동작		--> request
+	처리		--> controller, Handler ==>Business Logic
+	결과		--> response
+
+		MVC 모델
+
+
+
+Front : HTML5 + CCS3 + Javascript
+
+ Java [솔루션 개발, 웹 개발]
+JSP + Spring + [Hibernate/JPA or MyBatis] + [OracleDB, MySQL]
+
+ Javascript[웹 개발]
+Angular.js(예전에는 엄청 핫함, 근데 지금 좀 안 쓸려고한다.)
+[Vue.js or (React.js+redux)] + [node.js/Express] + MongoDB... NoSQL
+React.js + Apollo + GraphQL
+
+ IOS : Object-C --> Swift
+ Android : Java --> Kotlin
+	React.js(React, React Hook, >>>React Native) -- node.js
+	Dart/Flutter
+
+ Python
+  - 웹개발 : Django
+  - 인공지능
+  - 웹크롤링
+  - 빅데이터
+	R, SATA, Excel
+
+ C# : .NET Framework, 솔루션, 모바일, 게임(Unity)
+
+ Ruby : Ruby on Rails 
+
+ [블록체인]
+Go	- private Blockchain
+Solidity	- public Blockchain
+
