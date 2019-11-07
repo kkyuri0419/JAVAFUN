@@ -2,13 +2,28 @@ package series.fun.java.chap03.homework;
 /////////////////////////////////////////////////////////////////////////////////////////
 class Animal{
 	private String animalName;
+
+	//Getter
+	public String getAnimalName(){
+		return animalName;
+	}
+
+	//Setter
+	public void  setAnimalName(String newAnimalName){
+		this.animalName = newAnimalName;
+	}
 	
 	public void move() {
 		System.out.println("움직입니다.");
 	}
 }
 /////////////////////////////////////////////////////////////////////////////////////////
-class Wolf{
+class Wolf extends Animal{
+
+	@Override
+	public void move() {
+		System.out.println( getAnimalName() + "가 움직입니다.");
+	}
 	
 }
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -22,6 +37,12 @@ public class Exercise03 {
 	 * 문제5. animalName의 값을 "리더"로 바꿔서 결과가 "리더가 움직입니다."라고 나오는지 확인하세요.
 	 */
 	public static void main(String[] args) {
+
+		Wolf wolf = new Wolf();
+		wolf.setAnimalName("랑이");
+		wolf.move();
+		wolf.setAnimalName("리더");
+		wolf.move();
 		
 	} 
 }

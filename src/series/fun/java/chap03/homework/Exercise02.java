@@ -15,19 +15,23 @@ class Calc{
 	}
 	
 	public int add() {
-		return 0;
+		System.out.println(num1 + num2);
+		return (num1 + num2);
 	}
 	
 	public int sub() {
-		return 0;
+		System.out.println(num1 - num2);
+		return (num1 - num2);
 	}
 	
 	public int mul() {
-		return 0;
+		System.out.println(num1 * num2);
+		return (num1 * num2);
 	}
 	
 	public double div() {
-		return 0;
+		System.out.println(num1 / num2);
+		return (num1 / num2);
 	}
 }
 /////////////////////////////////////////////////////////////////////////////////////////
