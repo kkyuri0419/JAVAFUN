@@ -55,8 +55,29 @@ public class Exercise04{
 		}
 	}
 
-	public static String logIn(String username, String password){
-		return "";
+	public static void logIn(Member[] memberDB, Scanner keyboard){
+		System.out.println("아이디를 입력하세요 : ");
+		keyboard.nextLine();
+		String id = keyboard.nextLine();
+		System.out.println("비밀번호를 입력하세요 : ");
+		String ps = keyboard.nextLine();
+		boolean isEqual = false;
+		for (int i=0; i < memberDB.length; i++) {
+			if (memberDB[i]!=null&&memberDB[i].getUsername().equals(id)) {
+				System.out.println("ssss1");
+				if (memberDB[i].getPassword().equals(ps)) {
+					isEqual = true;
+				}
+
+			}
+			
+		}//for
+		if (isEqual) {
+			System.out.println("로그인 성공!");
+		}else {
+			System.out.println("로그인 실패");
+		}
+	
 	}
 
 	public static String SignUpID(Scanner keyboard){
@@ -113,7 +134,7 @@ public class Exercise04{
 			int service = menuController(keyboard);
 			switch(service){
 				case 1: 
-					System.out.println("아이디를 입력하세요 : ");
+					/*System.out.println("아이디를 입력하세요 : ");
 					keyboard.nextLine();
 					String id = keyboard.nextLine();
 					System.out.println("비밀번호를 입력하세요 : ");
@@ -133,9 +154,9 @@ public class Exercise04{
 						System.out.println("로그인 성공!");
 					}else {
 						System.out.println("로그인 실");
-					}
+					}*/
 				
-//					logIn();
+					logIn(memberDB,keyboard);
 					break;
 				case 2:
 					signUp(memNum,memberDB,keyboard);
@@ -145,6 +166,7 @@ public class Exercise04{
 					isTerminate = true;
 					break;
 				default:
+					System.out.println("1,2,3중에 입력해주세요.");
 					break;
 
 
