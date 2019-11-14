@@ -1,6 +1,5 @@
 package series.fun.java.chap02.homework;
-
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class Remind {
 	/* 01. 변수
@@ -60,7 +59,7 @@ public class Remind {
 			System.out.println("B");
 		}else if(score > 60 && score <= 70) {
 			System.out.println("B");
-		}else if (score > 0 && score <= 60) {
+		}else if (score >= 0 && score <= 60) {
 			System.out.println("F");
 		}else {
 			System.out.println("점수를 잘못입력하셨습니다");
@@ -83,7 +82,7 @@ public class Remind {
 	/* 05. 배열
 	 * 배열 [5,1,6,10,9,2]를 오름차순으로 정렬해보세요
 	 */
-	/* ******************************************************* /
+	/********************************************************/
 	public static void main(String[] args) {
 		int[] iArr = {5,1,6,10,9,2};
 		
@@ -96,18 +95,24 @@ public class Remind {
 				}//if
 			}//for
 		}//for
-		System.out.print("[ ");
-		for (int t = 0; t <iArr.length; t++) {
-			System.out.print(iArr[t] + " ");
+		System.out.print("[");
+		for (int i = 0; i <iArr.length; i++) {
+			if(i==iArr.length-1) {
+				System.out.print(iArr[i]);
+				break;
+			}
+			System.out.print(iArr[i] + ", ");
 		}
 		System.out.println("]");
+		
+		System.out.println(Arrays.toString(iArr));
 	}
 
 	/********************************************************/
 	/* 06. 함수
 	 * 랜덤으로 num1과 num2 사이의 정수를 반환하는 returnRandomNumber( )를 구현하세요
 	 */
-	/********************************************************/
+	/* ******************************************************* /
 	public static void main(String[] args) {
 		Scanner keyboard = new Scanner(System.in);
 		System.out.println("최소을 입력해 주세요: ");
