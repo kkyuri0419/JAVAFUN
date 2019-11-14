@@ -10,14 +10,15 @@ class Gun{
 		this.bullet = bullet;
 	}
 
-	public void shot(Monster monster) { //monster를 받아서 쓸 수 있도록 인자로 설정
+	public boolean shot(Monster monster) { //monster를 받아서 쓸 수 있도록 인자로 설정
+		boolean isDead = false;
 		if (bullet > 0) {
-			monster.hit();
+			isDead = monster.hit();
 			bullet -= 1;
 		}else {
 			System.out.println("reload needed");
 		}// else
-	}// shot()
+		return isDead;	}// shot()
 
 	public void reload() {
 		bullet += 5;
@@ -43,8 +44,9 @@ class Monster{
 	
 	//true값을 반환하면 죽음을 의미함
 	public boolean hit() {
-		System.out.println("꾸에엑");
+
 		if(hp > 0) {
+			System.out.println("꾸에엑");
 			hp -= 500; //총알이 적중되면 hp가 500만큼 닳습니다.
 			if(hp <= 0) {
 				System.out.println("monter dead");
@@ -82,7 +84,7 @@ public class Exercise05 {
 			
 			switch(select) {
 			case 1:
-				gun.shot(monster); //인자로 생성되었던 몬스터를 넣어
+				isMonsterDead = gun.shot(monster); //인자로 생성되었던 몬스터를 넣어
 				break;
 			case 2:
 				gun.reload();
