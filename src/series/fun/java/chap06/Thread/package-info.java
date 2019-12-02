@@ -5,4 +5,4 @@
  * @author yurikim
  *
  */
-package series.fun.java.chap04.lec04;
+package series.fun.java.chap06.Thread;
