@@ -1,4 +1,4 @@
-package series.fun.java.chap06.Thread;
+package series.fun.java.chap06._01_Thread;
 
 /*Thread를 만드는 첫번째 방법
  * 1) Thread를 상속하는 클래스를 만든다.

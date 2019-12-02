@@ -1,4 +1,4 @@
-package series.fun.java.chap06.Thread;
+package series.fun.java.chap06._01_Thread;
 
 class AddThread2 extends Sum implements Runnable{
 	
